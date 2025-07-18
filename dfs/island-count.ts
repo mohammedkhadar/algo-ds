@@ -22,11 +22,12 @@ const islandCount = (input) => {
     }
     
 
-    //scan
+    // 1. scan
     let count = 0;
     for (let i=0;i<rows;i++) {
         for(let j=0;j<cols;j++) {
             if(input[i][j] === 1) {
+                // 2. dfs + mark 0
                 dfs(i, j)
                 count += 1
             }
