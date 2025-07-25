@@ -8,12 +8,12 @@ function subArraySum(arr, k) {
         total += arr[i]
         const diff = total-k
 
-        if (prefixSums[diff]) {
+        if(prefixSums[diff]) {
             counter+=prefixSums[diff]
         }
         if(prefixSums[total]){
             prefixSums[total]+=1
-        } else {
+        }else{
             prefixSums[total]=1
         }
     }
