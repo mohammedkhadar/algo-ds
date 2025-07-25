@@ -1,0 +1,20 @@
+##Count Islands
+
+[Link](https://leetcode.com/problems/number-of-islands/)
+
+**Problem:**
+
+[ 1  1  0  0 ]
+[ 1  0  0  0 ]
+[ 0  0  1  1 ]
+[ 0  0  0  1 ]
+
+1 = land; 0 = water
+Output: 2
+
+**Solution:**
+
+Scan cells
+If 1 => DFS(cell) = DFS(above), DFS(below), DFS(right), DFS(left)
+    -   mark visited cell as 0
+Count + 1
