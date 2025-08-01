@@ -17,6 +17,7 @@ function threeSum(arr: number[]) {
                 right += 1
             } else {
                 result.push([arr[i], arr[left], arr[right]])
+
                 // skip duplicate
                 while(arr[left] === arr[left+1]) left++
                 while(arr[right] === arr[right-1]) right--
@@ -32,3 +33,5 @@ function threeSum(arr: number[]) {
 const input = [-1,0,1,2,-1,-4]
 const output = threeSum(input)
 console.log(output)
+
+// Runtime: O(n^2)
